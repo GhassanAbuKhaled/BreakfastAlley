@@ -207,7 +207,7 @@ section {
 .fourthPageSectionDescription {
 
     justify-self: center;
-  
+
 
 }
 
@@ -216,20 +216,24 @@ section {
     gap: 1.8rem;
     padding: 2rem;
     min-height: 80vh;
-  }
-  
-  .fifthPageSection-grid > div {
+}
+
+.fifthPageSection-grid>div {
     justify-self: center;
-  }
-  .fifthPageSection-grid .heading{
+}
+
+.fifthPageSection-grid .heading {
     justify-self: start;
-  }
-  .fifthPageSection-grid h3{
-     font-size: clamp(2rem , 6vw , 6rem)
-  }
-  .fifthPageSection-grid h2{
-    font-size: clamp(2rem , 6vw , 3rem)
- }
+}
+
+.fifthPageSection-grid h3 {
+    font-size: clamp(2rem, 6vw, 6rem)
+}
+
+.fifthPageSection-grid h2 {
+    font-size: clamp(2rem, 6vw, 3rem)
+}
+
 
 /* Utility classes */
 
@@ -328,9 +332,11 @@ section {
 .margin-bottom-700 {
     margin-block-end: var(--size-700);
 }
+
 .margin-top-700 {
     margin-top: var(--size-700);
 }
+
 .columns {
     display: grid;
     gap: 1.8rem;
@@ -372,9 +378,9 @@ section {
     }
 
     .fifthPageSection-grid {
-      
+
         grid-template-columns: 2fr 1fr 1fr;
         padding: 2rem;
     }
-    
+
 }

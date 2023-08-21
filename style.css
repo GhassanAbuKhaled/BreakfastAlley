@@ -1,0 +1,380 @@
+:root {
+
+    --primary-blue: #90ADCF;
+    --accent-orange: #CF642C;
+    --background-white: #fff;
+
+    --ff-DMSans: 'DM Sans', sans-serif;
+    --ff-Baskerville: 'Libre Baskerville', serif;
+    --ff-Ovo: 'Ovo', serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --fs-300: 0.8125rem;
+    --fs-400: 0.875rem;
+    --fs-500: 0.9375rem;
+    --fs-600: 1rem;
+    --fs-700: 1.1rem;
+    --fs-800: 1.4rem;
+    --fs-900: 5rem;
+
+
+    --fs-primary-heading: 2.5rem;
+
+    --size-100: 0.25rem;
+    --size-200: 0.5rem;
+    --size-300: 0.75rem;
+    --size-400: 1rem;
+    --size-500: 1.5rem;
+    --size-600: 2rem;
+    --size-700: 3rem;
+    --size-800: 4rem;
+    --size-900: 4.1rem;
+}
+
+@media (min-width: 20em) {
+    :root {
+
+        --fs-600: 2rem;
+        --fs-700: 2.1rem;
+        --fs-800: 2.4rem;
+    }
+}
+
+@media (min-width: 50em) {
+    :root {
+        --size-1100: 5rem;
+        --fs-primary-heading: 5rem;
+    }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Set core body defaults */
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-accent-100);
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* general styling */
+
+body {
+    font-family: var(--ff-DMSans);
+    font-size: var(--fs-body);
+    color: var(--background-white);
+    overflow-x: hidden;
+    transition: all .5s ease-out;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* styling first page*/
+.firstPageSection {
+    background: url('./assets/bread.png');
+    background-size: cover;
+}
+
+.firstPageSection video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: none;
+}
+
+.hero {
+    display: grid;
+    width: 100vw;
+    height: 75vh;
+}
+
+@media (min-aspect-ratio:16/9) {
+    .firstPageSection video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio:16/9) {
+    .firstPageSection video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (min-width: 930px) {
+    .firstPageSection video {
+        display: block;
+    }
+
+    .firstPageSection {
+        background: none;
+    }
+
+    .hero {
+        width: min(700px, 100vw);
+    }
+}
+
+.button {
+    border: 0;
+    border-radius: 25px;
+    width: min(300px, 90%);
+    height: 50px;
+    font-size: 1.4rem;
+}
+
+.p-width {
+    width: min(400px, 100%);
+}
+
+.secondPageSection {
+    padding: 2rem;
+}
+
+.secondPageSection img {
+    justify-self: center;
+    align-self: self-start;
+}
+
+.secondPageSection .description {
+    justify-self: start;
+}
+
+.fourthPageSectionDescription {
+
+    justify-self: center;
+  
+
+}
+
+.fifthPageSection-grid {
+    display: grid;
+    gap: 1.8rem;
+    padding: 2rem;
+    min-height: 80vh;
+  }
+  
+  .fifthPageSection-grid > div {
+    justify-self: center;
+  }
+  .fifthPageSection-grid .heading{
+    justify-self: start;
+  }
+  .fifthPageSection-grid h3{
+     font-size: clamp(2rem , 6vw , 6rem)
+  }
+  .fifthPageSection-grid h2{
+    font-size: clamp(2rem , 6vw , 3rem)
+ }
+
+/* Utility classes */
+
+.ff-Baskerville {
+    font-family: var(--ff-Baskerville);
+}
+
+.ff-DMSans {
+    font-family: var(--ff-DMSans);
+}
+
+.ff-Ovo {
+    font-family: var(--ff-Ovo);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
+.fw-regular {
+    font-weight: var(--fw-regular);
+}
+
+.fs-primary-heading {
+    font-size: var(--fs-primary-heading);
+}
+
+.fs-500 {
+    font-size: 19px;
+}
+
+.fs-600 {
+    font-size: var(--fs-600);
+}
+
+.fs-700 {
+    font-size: var(--fs-700);
+}
+
+.fs-800 {
+    font-size: var(--fs-800);
+}
+
+.fs-900 {
+    font-size: var(--fs-900);
+}
+
+.white-color {
+    color: var(--background-white);
+}
+
+.white-background {
+    background-color: var(--background-white);
+}
+
+.orange-color {
+    color: var(--accent-orange);
+}
+
+.orange-background {
+    background-color: var(--accent-orange);
+}
+
+.blue-background {
+    background-color: var(--primary-blue)
+}
+
+.align_end {
+    align-self: flex-end;
+}
+
+.align_center {
+    align-self: center;
+}
+
+.align_start {
+    align-self: self-start;
+}
+
+.justify_center {
+    justify-self: center;
+}
+
+.justify_start {
+    justify-self: start;
+}
+
+.justify_end {
+    justify-self: end;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.margin-bottom-700 {
+    margin-block-end: var(--size-700);
+}
+.margin-top-700 {
+    margin-top: var(--size-700);
+}
+.columns {
+    display: grid;
+    gap: 1.8rem;
+}
+
+.even-rows {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 2.9rem;
+}
+
+
+@media (min-width: 50em) {
+
+
+    .columns {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    .page-grid {
+        grid-template-columns: 1.2fr 1fr;
+        gap: 1.8rem;
+    }
+
+    .secondPageSection img {
+        justify-self: start;
+        align-self: center;
+    }
+
+    .secondPageSection .description {
+        justify-self: center;
+    }
+
+    .fourthPageSectionDescription {
+
+        justify-self: start;
+
+    }
+
+    .fifthPageSection-grid {
+      
+        grid-template-columns: 2fr 1fr 1fr;
+        padding: 2rem;
+    }
+    
+}

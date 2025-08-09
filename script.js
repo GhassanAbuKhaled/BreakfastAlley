@@ -128,6 +128,21 @@ function initScrollSpy() {
         if (!scrollSpyEnabled) return;
         
         const scrollPos = window.scrollY + 100;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        
+        // Check if we're at the bottom of the page
+        if (scrollPos + windowHeight >= documentHeight - 50) {
+            // Remove active class from all links
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Add active class to footer link
+            const footerLink = document.querySelector('[data-section="footer"]');
+            if (footerLink) {
+                footerLink.classList.add('active');
+            }
+            return;
+        }
         
         sections.forEach(section => {
             const sectionTop = section.offsetTop;

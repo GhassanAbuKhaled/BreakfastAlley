@@ -122,7 +122,7 @@ function scrollToSection(targetId) {
 let scrollSpyEnabled = true;
 
 function initScrollSpy() {
-    const sections = document.querySelectorAll('section[id]');
+    const sections = document.querySelectorAll('section[id], footer[id]');
     
     function updateActiveLink() {
         if (!scrollSpyEnabled) return;
